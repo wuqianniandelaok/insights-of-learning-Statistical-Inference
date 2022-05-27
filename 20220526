@@ -1,0 +1,23 @@
+# Chapter 6 Multiple Regression
+
+# visulization as interaction model
+ggplot(evals_ch6, aes(x = age, y = score, color = gender)) +
+  geom_point() +
+  labs(x = "Age", y = "Teaching Score", color = "Gender") +
+  geom_smooth(method = "lm", se = FALSE)
+# visulization as Parallel model
+ggplot(evals_ch6, aes(x = age, y = score, color = gender)) +
+  geom_point() +
+  labs(x = "Age", y = "Teaching Score", color = "Gender") +
+  geom_parallel_slopes(se = FALSE)
+  
+ # how to build the equation from the table: interaction and parallel model
+ # One numerical and one categorical
+ # two numerical
+ get_regression_table()
+  
+ # Principle of model selection
+ # 1.Occam’s Razor using visualizations
+ # 2.selecting the model with higher R2= var(ˆy)/var(y)
+ 
+ # Simpson’s Paradox
